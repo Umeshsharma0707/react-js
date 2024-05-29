@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Write a JavaScript code to determine if a given number stored in a variable `num` is positive, negative, or
+        zero.</h1>
+
+        <h1 id="num"></h1>
+        <h1 id="ans"></h1>
+
+        <script>
+                let num = parseInt(prompt("enter num "));
+                document.getElementById("num").innerText = `num : ${num}`;
+
+                if(num > 0){
+                    document.getElementById("ans").innerText = `${num} is positive`;
+                }else if(num == 0){
+                    document.getElementById("ans").innerText = `${num} is zero`;
+                }else{
+                    document.getElementById("ans").innerText = `${num} is negative`;
+                }
+        </script>
+</body>
+
+</html>
