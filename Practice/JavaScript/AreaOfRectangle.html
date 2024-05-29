@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Write a JavaScript code to calculate the area of a rectangle with given width and height stored in variables
+        width and height.</h1>
+
+      <h1 id="length"></h1>
+      <h1 id="width"></h1>
+      <h1 id="result"></h1>  
+    <script>
+        let l = parseInt(prompt("enter length "));
+        let w = parseInt(prompt("enter width "));
+
+        document.getElementById("length").innerText = `length :  ${l}`;
+        document.getElementById("width").innerText = `width :  ${w}`;
+
+        area = l*w;
+
+        document.getElementById("result").innerText = `area of rectangle : ${area}`;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Write a JavaScript code to find the factorial of a number stored in a variable n.</h1>
+    <h1 id="num"></h1>
+    <h1 id="fact"></h1>
+
+    <script>
+        let num = parseInt(prompt("enter a number to find factorial "));
+        document.getElementById("num").innerText = ` number : ${num}`;
+        let fact = 1;
+        for(let i = 1; i <=num;i++){
+            fact = fact * i;
+        }
+        document.getElementById("fact").innerText = `Factorial of ${num} : ${fact}`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+que:
+
+1. Write a JavaScript code to declare a variable called `name` and assign it the value "John".
+2. Write a JavaScript code to declare two variables `x` and `y`, and assign them values 5 and 10 respectively. Calculate their sum and store it in a variable called `result`.
+3. Write a JavaScript code to check if a number stored in a variable `num` is even or odd.
+4. Write a JavaScript code to find the maximum of two numbers stored in variables `a` and `b`.
+5. Write a JavaScript code to find the minimum of three numbers stored in variables `x`, `y`, and `z`.
+6. Write a JavaScript code to calculate the area of a rectangle with given width and height stored in variables `width` and `height`.
+7. Write a JavaScript code to convert a temperature in Celsius to Fahrenheit. Store the Celsius temperature in a variable called `celsius` and the Fahrenheit temperature in a variable called `fahrenheit`.
+8. Write a JavaScript code to check if a person is eligible to vote based on their age stored in a variable `age`.
+9. Write a JavaScript code to check if a year stored in a variable `year` is a leap year.
+10. Write a JavaScript code to find the factorial of a number stored in a variable `n`.
+11. Write a JavaScript code to determine if a given number stored in a variable `num` is positive, negative, or zero.
+12. Write a JavaScript code to check if a string stored in a variable `str` is a palindrome.
+13. Write a JavaScript code to reverse a string stored in a variable `str`.
+14. Write a JavaScript code to concatenate two strings stored in variables `str1` and `str2`.
+15. Write a JavaScript code to find the length of a string stored in a variable `str`.
+16. Write a JavaScript code to convert a string to uppercase.
+17. Write a JavaScript code to convert a string to lowercase.
+18. Write a JavaScript code to extract a portion of a string stored in a variable `str`.
+19. Write a JavaScript code to replace a specific word in a string stored in a variable `str`.
+20. Write a JavaScript code to change the background color of a paragraph element with id `paragraph` to red.
+21. Write a JavaScript code to change the text content of a paragraph element with id `paragraph` to "Hello, World!".
+22. Write a JavaScript code to append a new paragraph element with text content "New Paragraph" to a div element with id `container`.
+23. Write a JavaScript code to remove all child elements of a div element with id `container`.
+24. Write a JavaScript code to toggle the visibility of a div element with id `toggleDiv` when a button with id `toggleButton` is clicked.
+25. Write a JavaScript code to add a class "highlight" to all paragraph elements with class `para` using `querySelectorAll()`.
+
+These questions should test your understanding and proficiency in variables, conditional statements, operators, and DOM manipulation in JavaScript.

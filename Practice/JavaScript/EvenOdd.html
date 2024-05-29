@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>check number is even or odd</h2>
+    <h1></h1>
+    <script>
+        
+        
+        let num = parseInt(prompt("enter a number to check if it is even or odd"));
+
+        let ans = document.querySelector("h1");
+
+        if(num % 2 == 0){
+            ans.innerText = `${num} is even`;
+        }else{
+            ans.innerText = `${num} is odd`;
+        }
+
+    </script>
+</body>
+</html>

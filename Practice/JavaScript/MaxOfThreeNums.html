@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1> Write a JavaScript code to find the minimum of three numbers stored in variables x, y, and z.</h1>
+    <h1 id="a"></h1>
+    <h1 id="b"></h1>
+    <h1 id="c"></h1>
+    <h1 id="result"></h1>
+    
+    <script>
+        let a = parseInt(prompt("enter a "));
+        let b = parseInt(prompt("enter b "));
+        let c = parseInt(prompt("enter c "));
+
+        document.getElementById("a").innerText = `a : ${a}`;
+        document.getElementById("b").innerText = `b : ${b}`;
+        document.getElementById("c").innerText = `c : ${c}`;
+        
+        let result = document.getElementById("result");
+        if(a>b && a>c){
+            result.innerText = "a is greater";
+        }else if(b>a && b>c){
+            result.innerText = "b is greater";
+        }else if(c > a && c > b){
+            result.innerText = "c is greater";
+        }
+
+
+    </script>
+</body>
+</html>
