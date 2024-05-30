@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Write a JavaScript code to convert a string to uppercase.</h1>
+
+    <h1 id="str"></h1>
+    <h1 id="upStr"></h1>
+    <h1 id="loStr"></h1>
+
+    <button onclick="upCaseStr()">UPPERCASE STRING</button>
+
+    <button onclick="loCaseStr()">lowercase string</button>
+
+    <script>
+        let str = prompt("enter a string ");
+        document.getElementById("str").innerText = `String : ${str}`;
+
+        function upCaseStr(){
+            let ans = str.toUpperCase();
+            console.log(ans);
+            document.getElementById("upStr").innerText = `UpperCase String : ${ans}`;
+        };
+        function loCaseStr(){
+            let ans = str.toLowerCase();
+            console.log(ans);
+
+            document.getElementById("loStr").innerText = `lowerCase String : ${ans}`;
+        };
+
+    </script>
+    
+</body>
+</html>
