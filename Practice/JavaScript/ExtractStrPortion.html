@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Write a JavaScript code to extract a portion of a string stored in a variable `str`.</h1>
+
+    <h1 id="str"></h1>
+    <h1 id="extractedStr"></h1>
+    <h1 id="startEnd"></h1>
+
+    <script>
+
+        let str = prompt("enter a string ");
+        let start = parseInt(prompt("enter a starting index to extract the string "));
+        let end = parseInt(prompt("enter an end point of string to extract"));
+
+        document.getElementById("str").innerText = `String : ${str}`;
+
+        const newStr = str.substring(start,end);
+        
+        document.getElementById("extractedStr").innerText = `extracted string : ${newStr}`;
+        document.getElementById("startEnd").innerText = `extracted string... \n starting index : ${start} \n ending index : ${end}`;
+        
+
+    </script>
+
+</body>
+</html>

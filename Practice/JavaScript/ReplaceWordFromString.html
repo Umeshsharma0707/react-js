@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Write a JavaScript code to extract a portion of a string stored in a variable `str`.</h1>
+
+    <h1 id="str"></h1>
+    <h1 id="target"></h1>
+
+    <h1 id="replace"></h1>
+    <h1 id="ans"></h1>
+
+    <script>
+
+        let str = prompt("enter a string ");
+        let target = prompt("target");
+        let replace = prompt("replace");
+
+        
+
+        document.getElementById("str").innerText = `String : ${str}`;
+
+        newStr = str.replace(target,replace);
+
+        
+        document.getElementById("target").innerText = `target in string : ${target}`;
+        document.getElementById("replace").innerText = `replace in string : ${replace}`;
+
+        document.getElementById("ans").innerText = `New String... \n ${newStr}`;
+        
+
+    </script>
+
+</body>
+</html>

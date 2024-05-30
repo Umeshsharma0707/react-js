@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Write a JavaScript code to append a new paragraph element with text content "New Paragraph" to a div element with id `container`.
+    
+
+    <p id="para">this is a paragraph</p>
+    <br>
+    <button onclick="appendPara()">add new paragraph</button>
+
+
+    <script>
+
+        function appendPara(){
+            const userInput = prompt("enter ");
+
+            let newPara = document.createElement("p");
+            newPara.innerText = userInput;
+            const para = document.getElementById("para");
+
+            para.append(newPara);
+            
+
+        }
+
+    </script>
+
+</body>
+</html>
