@@ -13,8 +13,20 @@
     <h1 id="result"></h1>
 
     <script>
-       let string = prompt("enter string");
-       
+        const str = prompt("enter a string");
+        const clearedStr = str.replace().toLowerCase();
+        const revStr = clearedStr.split("").reverse().join('');
+
+        document.getElementById("inputString").innerText = `Input String : ${str}`;        
+        console.log(revStr);
+        if(str == revStr){
+            document.getElementById("result").innerText = "string is palindrome";
+        }else{
+            document.getElementById("result").innerText = "string is not  palindrome";
+
+        }
+        
+
     </script>
 </body>
 </html>
