@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Write a JavaScript code to concatenate two strings stored in variables `str1` and `str2`</h1>
+
+    <h1 id="name"></h1>
+    <h1 id="surname"></h1>
+    <h1 id="fullName"></h1>
+
+    <script>
+        let name = prompt("enter your name");
+        let surname = prompt("enter your surname");
+
+        const fullName = `${name} ${surname}`;
+
+        document.getElementById("name").innerText = `Name : ${name}`;
+        document.getElementById("surname").innerText = `Surname : ${surname}`;
+
+        document.getElementById("fullName").innerText = `FullName : ${fullName}`;
+
+
+    </script>
+</body>
+</html>
