@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Write a JavaScript code to remove all child elements of a div element with id `container`.</h1>
+    <div id="container">
+        <p>para 1</p>
+        <p>para 2</p>
+        <p>Para3</p>
+    </div>
+    <button onclick="removeAllChildElements()">remove all child elements</button>
+
+    <script>
+        function removeAllChildElements() {
+            
+            let container = document.getElementById("container");
+
+            while(container.firstChild){
+                container.removeChild(container.firstChild);
+            }
+        }
+    </script>
+</body>
+</html>

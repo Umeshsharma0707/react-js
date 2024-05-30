@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Write a JavaScript code to toggle the visibility of a div element with id `toggleDiv` when a button with id
+    `toggleButton` is clicked.
+
+    <br>
+
+    <div id="toggleDiv">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, minima aliquam. Obcaecati blanditiis quis
+        iure, minima enim dignissimos qui debitis doloribus voluptate culpa asperiores? Quisquam enim consequatur beatae
+        quibusdam aspernatur.</div>
+
+        <button onclick="toggleVisibility()">toggle visibility</button>
+
+        <script>
+
+            let toggleDiv = document.getElementById("toggleDiv");
+
+           function toggleVisibility(){
+            if(toggleDiv.style.display === "block" || toggleDiv.style.display == ""){
+                toggleDiv.style.display = "none";
+            }else if(toggleDiv.style.display === "none" ){
+                toggleDiv.style.display = "block";
+
+            }
+           }
+
+        </script>
+</body>
+
+</html>
