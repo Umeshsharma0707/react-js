@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><a id="one" href=""">link</a></p>
+
+<p>Click the button to display the value of the href attribute of the link above.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    let a = prompt("enter web link");
+    document.getElementById("one").href = a;
+  var x = document.getElementById("one").href;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
