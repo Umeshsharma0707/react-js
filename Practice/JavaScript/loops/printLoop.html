@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Write a while loop that prints the numbers from 10 to 1.</h2>
+
+    <h1></h1>
+
+    <script>
+        let start = parseInt(prompt("enter starting number"));
+        let end = parseInt(prompt("enter starting number"));
+
+        while(start >= end){
+            document.querySelector("h1").append(`${start}`);
+            let br =  document.createElement("br");
+            document.querySelector("h1").append(br);
+
+            start--;
+        }
+
+    </script>
+</body>
+</html>

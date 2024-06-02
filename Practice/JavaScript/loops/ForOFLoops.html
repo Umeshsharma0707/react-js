@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Write a for...of loop to iterate over an array of numbers and print each number</p>
+    <h1></h1>
+
+    <script>
+        let fruits = ["apple", "banana", "kiwi"];
+       
+        function addFruit(newFruit) {
+                let h1 = document.createElement("h1");
+                h1.innerText = newFruit;
+                document.querySelector("p").append(h1);
+            }
+        for(fruit of fruits){
+            addFruit(fruit);
+        }
+    </script>
+    <script>
+        let btn = document.createElement("button");
+        document.querySelector("h1").prepend(btn);
+        document.write("</br>");
+        btn.innerText = "add more fruits";
+        btn.addEventListener("click",function(){
+            let newFruit = prompt("enter new Fruit name");
+            addFruit(newFruit);
+        })
+    </script>
+</body>
+</html>
