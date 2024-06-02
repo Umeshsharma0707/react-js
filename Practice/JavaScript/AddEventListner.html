@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <p>this is para</p>
+    <button>submit</button>
+    <script>
+        let btn = document.querySelector('button');
+        let p = document.querySelector('p');
+
+        btn.addEventListener("mouseover", async(event) =>{
+           btn.textContent = "you just clicked me";
+           p.style.color = "yellow";
+           p.style.backgroundColor= "black";
+           btn.disabled = true;
+           alert("para color is changed");
+           alert("butotn is disabled")
+           
+        });
+    </script>
+
+</body>
+</html
