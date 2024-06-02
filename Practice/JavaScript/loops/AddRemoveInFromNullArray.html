@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>create null array add and remove elements from array </p>
+
+    <button onclick="addItem()">add element</button>
+    <br><br>
+    <button onclick="removeItem()">remove element</button>
+
+    <div class="itemsContainer">
+        <h2 id="itemsHeading">Items List <br></h2>
+    </div>
+
+    <script>
+        let arr = [];
+        const itemsHeading = document.getElementById("itemsHeading");
+        let itemsContainer = document.querySelector("body");
+        function addItem() {
+            let item = prompt("enter item");
+
+            arr.push(item)
+
+            let h1 = document.createElement("h1").innerHTML = item + " ";
+            h1.className = "item";
+
+            itemsHeading.append(h1);
+
+        }
+        function removeItem() {
+            if (arr.length > 0) {
+                arr.pop()
+
+            }
+            let items = document.querySelectorAll("h1");
+            if (items.length > 0) {
+                itemsContainer.removeChild(items[items.length - 1]);
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
