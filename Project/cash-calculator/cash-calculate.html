@@ -46,7 +46,7 @@
                         <input type="text" id="note100">
                     </div>
                     <span id="span"> = </span>
-                    <span id="ans100">564</span>
+                    <span id="ans100">000</span>
                 </div>
                 <!-- 50 rs note -->
                 <div class="inner-main-div">
@@ -57,7 +57,7 @@
                         <input type="text"  id="note50">
                     </div>
                     <span id="span"> = </span>
-                    <span id="ans50">564</span>
+                    <span id="ans50">000</span>
                 </div>
                 <!-- 20 rs note -->
                 <div class="inner-main-div">
@@ -79,7 +79,12 @@
                         <input type="text" id="note10">
                     </div>
                     <span id="span"> = </span>
-                    <span id="ans10">564</span>
+                    <span id="ans10">000</span>
+                </div>
+
+                <div class="total-main-div" id="total-div">
+                    <p id="totalPara" class="total-innerdiv">000</p>
+                    <p id="noOfNotePara" class="total-innerdiv">000</p>
                 </div>
             </form>
         </div>
@@ -95,9 +100,19 @@
             let note = parseInt(document.getElementById("note500").value);
             event.preventDefault();
             let noteCal = note * 500;
-            noteCount++;
+            noteCount+=note;
             totalAmount+=noteCal;
-            document.getElementById("ans500").innerText = `${noteCal} INR`;
+            if(noteCal >0){
+                document.getElementById("ans500").innerText = `${noteCal} INR`;
+            }else{
+                document.getElementById("ans500").innerText = `0 INR`;
+
+
+            }
+            let totalPara = document.getElementById("totalPara");
+            totalPara.innerText = `Total Cash is : ${totalAmount} Inr`;
+            let noOfNotePara = document.getElementById("noOfNotePara");
+            noOfNotePara.innerText =   `Total Notes are : ${noteCount}`;
         });
 
         // 200 rs note
@@ -105,9 +120,18 @@
             let note = parseInt(document.getElementById("note200").value);
             event.preventDefault();
             let noteCal = note * 200;
-            noteCount++;
+            noteCount+=note;
             totalAmount+=noteCal;
-            document.getElementById("ans200").innerText = `${noteCal} INR`;
+            if(noteCal >0){
+                document.getElementById("ans200").innerText = `${noteCal} INR`;
+            }else{
+                document.getElementById("ans200").innerText = `0 INR`;
+
+            }
+            let totalPara = document.getElementById("totalPara");
+            totalPara.innerText = `Total Cash is : ${totalAmount} Inr`;
+            let noOfNotePara = document.getElementById("noOfNotePara");
+            noOfNotePara.innerText =   `Total Notes are : ${noteCount}`;
         });
 
         // 100 rs note
@@ -115,9 +139,18 @@
             let note = parseInt(document.getElementById("note100").value);
             event.preventDefault();
             let noteCal = note * 100;
-            noteCount++;
+            noteCount+=note;
             totalAmount+=noteCal;
-            document.getElementById("ans100").innerText = `${noteCal} INR`;
+            if(noteCal >0){
+                document.getElementById("ans100").innerText = `${noteCal} INR`;
+            }else{
+                document.getElementById("ans100").innerText = `0 INR`;
+
+            }
+            let totalPara = document.getElementById("totalPara");
+            totalPara.innerText = `Total Cash is : ${totalAmount} Inr`;
+            let noOfNotePara = document.getElementById("noOfNotePara");
+            noOfNotePara.innerText =   `Total Notes are : ${noteCount}`;
         });
 
         // 50 rs note
@@ -125,9 +158,18 @@
             let note = parseInt(document.getElementById("note50").value);
             event.preventDefault();
             let noteCal = note * 50;
-            noteCount++;
+            noteCount+=note;
             totalAmount+=noteCal;
-            document.getElementById("ans50").innerText = `${noteCal} INR`;
+            if(noteCal >0){
+                document.getElementById("ans50").innerText = `${noteCal} INR`;
+            }else{
+                document.getElementById("ans50").innerText = `0 INR`;
+
+            }
+            let totalPara = document.getElementById("totalPara");
+            totalPara.innerText = `Total Cash is : ${totalAmount} Inr`;
+            let noOfNotePara = document.getElementById("noOfNotePara");
+            noOfNotePara.innerText =   `Total Notes are : ${noteCount}`;
         });
 
         // 20 rs note
@@ -135,9 +177,18 @@
             let note = parseInt(document.getElementById("note20").value);
             event.preventDefault();
             let noteCal = note * 20;
-            noteCount++;
+            noteCount+=note;
             totalAmount+=noteCal;
-            document.getElementById("ans20").innerText = `${noteCal} INR`;
+            if(noteCal >0){
+                document.getElementById("ans20").innerText = `${noteCal} INR`;
+            }else{
+                document.getElementById("ans20").innerText = `0 INR`;
+
+            }
+            let totalPara = document.getElementById("totalPara");
+            totalPara.innerText = `Total Cash is : ${totalAmount} Inr`;
+            let noOfNotePara = document.getElementById("noOfNotePara");
+            noOfNotePara.innerText =   `Total Notes are : ${noteCount}`;
         });
 
         // 10 rs note
@@ -145,10 +196,24 @@
             let note = parseInt(document.getElementById("note10").value);
             event.preventDefault();
             let noteCal = note * 10;
-            noteCount++;
+            noteCount+=note;
             totalAmount+=noteCal;
-            document.getElementById("ans10").innerText = `${noteCal} INR`;
+            if(noteCal >0){
+                document.getElementById("ans10").innerText = `${noteCal} INR`;
+            }else{
+                document.getElementById("ans10").innerText = `0 INR`;
+
+            }
+            let totalPara = document.getElementById("totalPara");
+            totalPara.innerText = `Total Cash is : ${totalAmount} Inr`;
+            let noOfNotePara = document.getElementById("noOfNotePara");
+            noOfNotePara.innerText =   `Total Notes are : ${noteCount}`;
         });
+
+
+        
+            
+        
 
     </script>
 </body>
