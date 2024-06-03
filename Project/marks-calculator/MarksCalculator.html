@@ -27,6 +27,7 @@
 
         <p></p>
         <p id="percentagePara"></p>
+        <p id="gradePara"></p>
     </div>
 
 
@@ -39,6 +40,8 @@
             return sum;
         }
         let tMarks; // temp total marks
+        let tpercent; // temp total percent
+
         function calculateMarks() {
             document.getElementById("marksForm").addEventListener("submit",function (event){
                 event.preventDefault();
@@ -72,9 +75,31 @@
             }else{
                 percentagePara.innerText = "marks should be greater than 0"
             }
-
-           
+            studentGrade(percentage);
+            tpercent = percentage;
         }
+
+        function studentGrade(percentage){
+            let gradePara = document.getElementById("gradePara");
+            gradePara.style.border = "1px solid red";
+            gradePara.style.borderRadius = "10px";
+
+           if(percentage > 90){
+                gradePara.innerText = "\"A+\" Grade";
+           }else if(percentage >80){
+            gradePara.innerText = "\"A\" Grade";
+           }else if(percentage > 75){
+            gradePara.innerText = "\"B+\" Grade";
+           }else if(percentage > 50){
+            gradePara.innerText = "\"B\" Grade";
+           }else if(percentage > 36){
+            gradePara.innerText = "\"C\" Grade";
+           }else{
+            gradePara.innerText = "Fail";
+           }
+
+        }
+
 
     </script>
 
