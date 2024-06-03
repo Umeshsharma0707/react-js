@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks calculator</title>
+    <link rel="stylesheet" href="/Project/marks-calculator/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Enter Your Scores</h2>
+        <form id="marksForm"">
+            <label for="maths">Maths:</label>
+            <input type="text" id="maths" name="maths" min="0" max="100" required>
+            
+            <label for="physics">Physics:</label>
+            <input type="text" id="physics" name="physics" min="0" max="100" required>
+            
+            <label for="chemistry">Chemistry:</label>
+            <input type="text" id="chemistry" name="chemistry" min="0" max="100" required>
+            
+            <button type="submit" onclick="calculateMarks()">Submit</button>
+            <br>
+            <button type="submit" onclick="calculatePercentage()" style="display: none;" id="percentBtn">Percentage</button>
+
+        </form>
+
+        <p></p>
+        <p id="percentagePara"></p>
+    </div>
+
+
+    <script>
+
+        function sumMarks(a,b,c){
+            let sum = 0;
+            sum = a + b + c;
+
+            return sum;
+        }
+        let tMarks; // temp total marks
+        function calculateMarks() {
+            document.getElementById("marksForm").addEventListener("submit",function (event){
+                event.preventDefault();
+                let mathsMarks = parseInt(document.getElementById("maths").value);
+                let phyMarks = parseInt(document.getElementById("physics").value);
+                let chemMarks = parseInt(document.getElementById("chemistry").value);
+    
+                const totalMarks = sumMarks(mathsMarks,phyMarks,chemMarks);
+
+                document.querySelector("p").innerHTML = `<h1> Total Marks out of 300 : ${totalMarks} / 300`;
+                document.querySelector("p").style.border = "1px solid black";
+                document.querySelector("p").style.borderRadius = "10px"
+                
+                document.getElementById("percentBtn").style.display = "block";
+                tMarks = totalMarks;
+                if(totalMarks >300){
+                document.querySelector("p").append("your marks are greater than 300");
+                    
+                }
+            })
+        }
+
+        function calculatePercentage(){
+            let percentagePara = document.getElementById("percentagePara");
+            let percentage = 0;
+            if(tMarks > 0){
+                percentage = (tMarks/300)*100;
+                percentagePara.innerHTML = `Percentege : ${percentage} %`;
+                percentagePara.style.border = "1px solid black";
+                percentagePara.style.borderRadius = "10px";
+            }else{
+                percentagePara.innerText = "marks should be greater than 0"
+            }
+
+           
+        }
+
+    </script>
+
+</body>
+</html>
