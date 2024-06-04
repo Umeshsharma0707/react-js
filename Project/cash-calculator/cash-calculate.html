@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, ut aliquam neque unde assumenda repudiandae
-    perferendis error necessitatibus commodi? Id culpa nemo fugiat repellat, assumenda vero possimus officia rerum eum?
-    <br><br><br><br><br><br><br><br><br><br>
+    <div class="container" style="margin-bottom: 20px; margin-top: 20px;">
+        <h1>Cash Calculator</h1>
+    </div>
     <div class="container">
         <div class="main-div">
             <form action="" id="mainForm">
@@ -24,7 +24,7 @@
                         <input type="text" id="note500">
                     </div>
                     <span id="span"> = </span>
-                    <span id="ans500">000</span>
+                    <span id="ans500" class="ansspan">0 INR</span>
                 </div>
                 <!-- 200 rs note -->
                 <div class="inner-main-div">
@@ -35,7 +35,7 @@
                         <input type="text" id="note200">
                     </div>
                     <span id="span"> = </span>
-                    <span id="ans200">000</span>
+                    <span id="ans200" class="ansspan">0 INR</span>
                 </div>
                 <!-- 100 rs note -->
                 <div class="inner-main-div">
@@ -46,7 +46,7 @@
                         <input type="text" id="note100">
                     </div>
                     <span id="span"> = </span>
-                    <span id="ans100">000</span>
+                    <span id="ans100" class="ansspan">0 INR</span>
                 </div>
                 <!-- 50 rs note -->
                 <div class="inner-main-div">
@@ -54,10 +54,10 @@
                         <img src="/Project/cash-calculator/images/50.jpg" alt="50 note">
                     </div>
                     <div class="input-div">
-                        <input type="text"  id="note50">
+                        <input type="text" id="note50">
                     </div>
                     <span id="span"> = </span>
-                    <span id="ans50">000</span>
+                    <span id="ans50" class="ansspan">0 INR</span>
                 </div>
                 <!-- 20 rs note -->
                 <div class="inner-main-div">
@@ -68,7 +68,7 @@
                         <input type="text" id="note20">
                     </div>
                     <span id="span"> = </span>
-                    <span id="ans20">000</span>
+                    <span id="ans20" class="ansspan">0 INR</span>
                 </div>
                 <!-- 10 rs note -->
                 <div class="inner-main-div">
@@ -79,141 +79,45 @@
                         <input type="text" id="note10">
                     </div>
                     <span id="span"> = </span>
-                    <span id="ans10">000</span>
+                    <span id="ans10" class="ansspan">0 INR</span>
                 </div>
 
                 <div class="total-main-div" id="total-div">
-                    <p id="totalPara" class="total-innerdiv">000</p>
-                    <p id="noOfNotePara" class="total-innerdiv">000</p>
+                    <p id="totalPara" class="total-innerdiv">Total Cash is: 0 INR</p>
+                    <p id="noOfNotePara" class="total-innerdiv">Total Notes are: 0</p>
                 </div>
             </form>
         </div>
     </div>
 
     <script>
-        let noteCount = 0;
-        let totalAmount = 0;
         let mainForm = document.getElementById("mainForm");
 
-        // 500 rs note
-        document.getElementById("note500").addEventListener("keyup",function (event){
-            let note = parseInt(document.getElementById("note500").value);
-            event.preventDefault();
-            let noteCal = note * 500;
-            noteCount+=note;
-            totalAmount+=noteCal;
-            if(noteCal >0){
-                document.getElementById("ans500").innerText = `${noteCal} INR`;
-            }else{
-                document.getElementById("ans500").innerText = `0 INR`;
+        function calculate() {
+            let note500 = parseInt(document.getElementById("note500").value) || 0;
+            let note200 = parseInt(document.getElementById("note200").value) || 0;
+            let note100 = parseInt(document.getElementById("note100").value) || 0;
+            let note50 = parseInt(document.getElementById("note50").value) || 0;
+            let note20 = parseInt(document.getElementById("note20").value) || 0;
+            let note10 = parseInt(document.getElementById("note10").value) || 0;
 
+            let noteCount = note500 + note200 + note100 + note50 + note20 + note10;
+            let totalAmount = (note500 * 500) + (note200 * 200) + (note100 * 100) + (note50 * 50) + (note20 * 20) + (note10 * 10);
 
-            }
-            let totalPara = document.getElementById("totalPara");
-            totalPara.innerText = `Total Cash is : ${totalAmount} Inr`;
-            let noOfNotePara = document.getElementById("noOfNotePara");
-            noOfNotePara.innerText =   `Total Notes are : ${noteCount}`;
+            document.getElementById("ans500").innerText = `${note500 * 500} INR`;
+            document.getElementById("ans200").innerText = `${note200 * 200} INR`;
+            document.getElementById("ans100").innerText = `${note100 * 100} INR`;
+            document.getElementById("ans50").innerText = `${note50 * 50} INR`;
+            document.getElementById("ans20").innerText = `${note20 * 20} INR`;
+            document.getElementById("ans10").innerText = `${note10 * 10} INR`;
+
+            document.getElementById("totalPara").innerText = `Total Cash is: ${totalAmount} INR`;
+            document.getElementById("noOfNotePara").innerText = `Total Notes are: ${noteCount}`;
+        }
+
+        document.querySelectorAll('input').forEach(function (input){
+            input.addEventListener('keyup', calculate);
         });
-
-        // 200 rs note
-        document.getElementById("note200").addEventListener("keyup",function (event){
-            let note = parseInt(document.getElementById("note200").value);
-            event.preventDefault();
-            let noteCal = note * 200;
-            noteCount+=note;
-            totalAmount+=noteCal;
-            if(noteCal >0){
-                document.getElementById("ans200").innerText = `${noteCal} INR`;
-            }else{
-                document.getElementById("ans200").innerText = `0 INR`;
-
-            }
-            let totalPara = document.getElementById("totalPara");
-            totalPara.innerText = `Total Cash is : ${totalAmount} Inr`;
-            let noOfNotePara = document.getElementById("noOfNotePara");
-            noOfNotePara.innerText =   `Total Notes are : ${noteCount}`;
-        });
-
-        // 100 rs note
-        document.getElementById("note100").addEventListener("keyup",function (event){
-            let note = parseInt(document.getElementById("note100").value);
-            event.preventDefault();
-            let noteCal = note * 100;
-            noteCount+=note;
-            totalAmount+=noteCal;
-            if(noteCal >0){
-                document.getElementById("ans100").innerText = `${noteCal} INR`;
-            }else{
-                document.getElementById("ans100").innerText = `0 INR`;
-
-            }
-            let totalPara = document.getElementById("totalPara");
-            totalPara.innerText = `Total Cash is : ${totalAmount} Inr`;
-            let noOfNotePara = document.getElementById("noOfNotePara");
-            noOfNotePara.innerText =   `Total Notes are : ${noteCount}`;
-        });
-
-        // 50 rs note
-        document.getElementById("note50").addEventListener("keyup",function (event){
-            let note = parseInt(document.getElementById("note50").value);
-            event.preventDefault();
-            let noteCal = note * 50;
-            noteCount+=note;
-            totalAmount+=noteCal;
-            if(noteCal >0){
-                document.getElementById("ans50").innerText = `${noteCal} INR`;
-            }else{
-                document.getElementById("ans50").innerText = `0 INR`;
-
-            }
-            let totalPara = document.getElementById("totalPara");
-            totalPara.innerText = `Total Cash is : ${totalAmount} Inr`;
-            let noOfNotePara = document.getElementById("noOfNotePara");
-            noOfNotePara.innerText =   `Total Notes are : ${noteCount}`;
-        });
-
-        // 20 rs note
-        document.getElementById("note20").addEventListener("keyup",function (event){
-            let note = parseInt(document.getElementById("note20").value);
-            event.preventDefault();
-            let noteCal = note * 20;
-            noteCount+=note;
-            totalAmount+=noteCal;
-            if(noteCal >0){
-                document.getElementById("ans20").innerText = `${noteCal} INR`;
-            }else{
-                document.getElementById("ans20").innerText = `0 INR`;
-
-            }
-            let totalPara = document.getElementById("totalPara");
-            totalPara.innerText = `Total Cash is : ${totalAmount} Inr`;
-            let noOfNotePara = document.getElementById("noOfNotePara");
-            noOfNotePara.innerText =   `Total Notes are : ${noteCount}`;
-        });
-
-        // 10 rs note
-        document.getElementById("note10").addEventListener("keyup",function (event){
-            let note = parseInt(document.getElementById("note10").value);
-            event.preventDefault();
-            let noteCal = note * 10;
-            noteCount+=note;
-            totalAmount+=noteCal;
-            if(noteCal >0){
-                document.getElementById("ans10").innerText = `${noteCal} INR`;
-            }else{
-                document.getElementById("ans10").innerText = `0 INR`;
-
-            }
-            let totalPara = document.getElementById("totalPara");
-            totalPara.innerText = `Total Cash is : ${totalAmount} Inr`;
-            let noOfNotePara = document.getElementById("noOfNotePara");
-            noOfNotePara.innerText =   `Total Notes are : ${noteCount}`;
-        });
-
-
-        
-            
-        
 
     </script>
 </body>
