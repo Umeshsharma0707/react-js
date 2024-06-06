@@ -54,3 +54,8 @@ form .display input{
 form input.equal{
     width: 145px;
 }
+
+form input.operator{
+    color: #33ffd8;
+    background-color: rgb(0, 0, 0);
+}
