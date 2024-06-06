@@ -1,50 +1,72 @@
-<!DOCTYPE html>  
-<html lang = "en">  
-<head>  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/Project/Calculator/style.css">
-</head>  
-<body>  
-<h1> Calculator </h1>  
-<div class= "formstyle">  
-<form name = "form" id="form">  
-      
-  <input id = "calc" type ="text" name = "answer"> <br> <br>  
-    
-  <input type = "button" value = "1" onclick = "form1.answer.value += '1' ">  
-  <input type = "button" value = "2" onclick = "form1.answer.value += '2' ">  
-  <input type = "button" value = "3" onclick = "form1.answer.value += '3' ">  
-   <input type = "button" value = "+" onclick = "form1.answer.value += '+' ">  
-  <br> <br>  
-    
-  <input type = "button" value = "4" onclick = "form1.answer.value += '4' ">  
-  <input type = "button" value = "5" onclick = "form1.answer.value += '5' ">  
-  <input type = "button" value = "6" onclick = "form1.answer.value += '6' ">  
-  <input type = "button" value = "-" onclick = "form1.answer.value += '-' ">  
-  <br> <br>  
-    
-  <input type = "button" value = "7" onclick = "form1.answer.value += '7' ">  
-  <input type = "button" value = "8" onclick = "form1.answer.value += '8' ">  
-  <input type = "button" value = "9" onclick = "form1.answer.value += '9' ">  
-  <input type = "button" value = "*" onclick = "form1.answer.value += '*' ">  
-  <br> <br>  
-    
-    
-  <input type = "button" value = "/" onclick = "form1.answer.value += '/' ">  
-  <input type = "button" value = "0" onclick = "form1.answer.value += '0' ">  
-    <input type = "button" value = "." onclick = "form1.answer.value += '.' ">  
-    
-  <input type = "button" value = "=" onclick = "form1.answer.value = eval(form1.answer.value) ">  
-  <br>   
+<!DOCTYPE html>
+<html lang="en">
 
-  <input type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >  
-  <br>   
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/Project/Calculator/style.css">
+</head>
+
+<body>
 
 
-    
-</form>  
-</div>  
-</body>  
-</html>  
+  <div class="container">
+    <div class="calculator">
+      <form action="">
+        <div class="display">
+          <input type="text" name="display" id="display">
+        </div>
+        <div>
+          <input type="button" value="AC" onclick="display.value = '' ">
+          <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)">
+          <input type="button" value="." onclick="display.value += '.' ">
+          <input type="button" value="/"onclick="display.value += '/' ">
+        </div>
+        <div>
+          <input type="button" value="7" onclick="display.value += '7' ">
+          <input type="button" value="8" onclick="display.value += '8' ">
+          <input type="button" value="9" onclick="display.value += '9' ">
+          <input type="button" value="*" onclick="display.value += '*' ">
+        </div>
+        <div>
+          <input type="button" value="4"  onclick="display.value += '4' " >
+          <input type="button" value="5" onclick="display.value += '5' ">
+          <input type="button" value="6"  onclick="display.value += '6' ">
+          <input type="button" value="-" onclick="display.value += '-' ">
+        </div>
+        <div>
+          <input type="button" value="1" onclick="display.value += '1' ">
+          <input type="button" value="2" onclick="display.value += '2' ">
+          <input type="button" value="3" onclick="display.value += '3' ">
+          <input type="button" value="+" onclick="display.value += '+' ">
+        </div>
+        <div>
+          <input type="button" value="00" onclick="display.value += '00' ">
+          <input type="button" value="0" onclick="display.value += '0' ">
+          <input type="button" value="=" class="equal"id="equal" onclick="calculateAns()">
+          
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    function calculateAns(){
+      let display = document.getElementById("display");
+
+      try {
+        display.value = eval(display.value);
+      } catch (error) {
+        display.value = "ERROR"
+        alert("found error \n Click \"AC\" button and try again!")
+        console.log(error);
+      }
+
+    }
+  </script>
+
+</body>
+
+</html>
