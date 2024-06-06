@@ -42,19 +42,7 @@
   <input type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >  
   <br>   
 
-  <script>
-    let form = document.getElementById("form");
-    let ans = document.getElementById("calc");
-    ans = 0;
-    form.querySelectorAll("input").forEach(function(i){
-        i.addEventListener("click", function(){
-            ans = 0;
-            ans.value += i.value;
-        })
-    })
 
-
-  </script>
     
 </form>  
 </div>  
