@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>● What will be the result for these expressions?
+        1. 5 > 4
+        2. "apple" > "pineapple"
+        3. "2" > "12"
+        4. undefined == null
+        5. undefined === null
+        6. null == "\n0\n"
+        7. null === +"\n0\n"</p>
+        <br><br><br><br><br>
+
+
+        <p  id="one"></p>
+        <p  id="two"></p>
+        <p  id="three"></p>
+        <p  id="four"></p>
+        <p  id="five"></p>
+        <p  id="six"></p>
+        <p  id="seven"></p>
+
+
+        <script>
+            document.getElementById("one").innerText = `5 > 4 : ${5>4}`;
+            document.getElementById("two").innerText = ` "apple" > "pineapple" : ${"apple" > "pineapple"}`;
+            document.getElementById("three").innerText = ` "2" > "12" : ${"2" > "12"}`;
+            document.getElementById("four").innerText = `undefined == null : ${undefined == null}`;
+            document.getElementById("five").innerText = `undefined === null : ${undefined === null}`;
+            document.getElementById("six").innerText = `null == "\n0\n" : ${null == "0"}`;
+            document.getElementById("seven").innerText = `null === +"\n0\n"" : ${null === +"\n0\n"}`;
+        </script>
+
+</body>
+</html>
