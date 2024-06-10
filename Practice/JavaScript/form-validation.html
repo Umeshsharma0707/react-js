@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form with Bootstrap</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Responsive Form</h2>
+        <div id="message-block" class="alert" style="display:none;"></div>
+        <form id="myForm" onsubmit="return formValidate()">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputName">Name</label>
+                    <input type="text" class="form-control" id="inputName" name="name" placeholder="Name" >
+                    <span id="nameMSg"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
+                    <span id="emailMSg"></span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" name="city" id="inputCity">
+                    <span id="cityMSg"></span>
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+
+        function formValidate() {
+            let name = document.forms["myForm"]["name"].value;
+
+            if (name == "" || name == 0) {
+                document.querySelector("#nameMSg").innerHTML = "name is required"
+                document.querySelector("#nameMSg").setAttribute("style", "color : red; border : 1px solid black'" );
+
+                return false;
+            }
+
+            let email = document.forms["myForm"]["email"].value;
+
+            if (email == "" || email == 0) {
+                document.querySelector("#emailMSg").innerHTML = "email is required"
+                document.querySelector("#emailMSg").setAttribute("style", "color : red; border : 1px solid black'");
+
+                return false;
+            }
+
+            let city = document.forms["myForm"]["city"].value;
+
+            if (city == "" || email == 0) {
+                document.querySelector("#cityMSg").innerHTML = "city name is required"
+                document.querySelector("#cityMSg").setAttribute("style", "color : red; border : 1px solid black'");
+
+                return false;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
