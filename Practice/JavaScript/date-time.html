@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1></h1>
+    <h2></h2>
+
+    <script>
+       
+        
+        function printTime(){
+            let date = new Date;
+
+            let hour = date.getHours();
+            let min = date.getMinutes();
+            let sec = date.getSeconds();
+
+            let show = `Time : ${hour} : ${min} : ${sec}`;
+
+            document.querySelector("h1").innerText = show;
+
+            
+        }
+
+        setInterval(printTime,500);
+        printTime();
+
+        function printDate(){
+            let date = new Date;
+
+            let todayDate = date.getDate();
+            let month = date.getMonth()+1;
+            let year = date.getFullYear();
+
+            let show = `Date : ${todayDate} : ${month} : ${year}`;
+
+            document.querySelector("h2").innerText = show;
+
+            
+        }
+
+        setInterval(printTime,500);
+        printTime();
+
+        printDate();
+
+    </script>
+</body>
+</html>
