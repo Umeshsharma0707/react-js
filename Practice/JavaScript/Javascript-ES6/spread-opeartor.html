@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>The Spread(...) operator expands an iterable (like an array) into more elements</p>
+
+
+    
+    <button>Print numbers</button>
+    <script>
+        let one = [1,2,3];
+        let two = [4,5,6];
+        let three  = [7,8,9];
+
+         const year = [...one,...two,...three];
+ 
+         document.write(year + " </br>printed using ... operator ");
+
+
+    </script>
+
+    <script>
+        let numbers = [15,20,25,30,95,35,45];
+
+        document.querySelector("button").addEventListener("click", ()=>{
+            for(let i = 0; i < numbers.length; i++){
+                let h1 = document.createElement("h1");
+                document.querySelector("p").append(h1);
+                h1.innerText = numbers[i];
+            }
+        });
+
+    </script>
+
+    <script>
+        // using ... operator
+        let add = (...nums)=>{
+            let sum = 0;
+           for(let i = 0; i < nums.length ; i++){
+                sum += nums[i];
+           }
+           let h1 = document.createElement("h1");
+                document.querySelector("p").append(h1);
+                h1.innerText = sum;
+
+           
+        }
+
+        add(5,5,10);
+    </script>
+<script>
+    // using arguments keyword
+    let addition = ()=>{
+        let sum = 0;
+       for(let i = 0; i < arguments.length ; i++){
+            sum += arguments[i];
+       }
+       let h1 = document.createElement("h1");
+            document.querySelector("p").append(h1);
+            h1.innerText = sum;
+    }
+
+    add(5,5,10);
+</script>
+
+</body>
+</html>

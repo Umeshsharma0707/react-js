@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Destructuring assignment makes it easy to assign array values and object properties to variables.</p>
+
+    <h1></h1>
+
+    <button>click me</button>
+
+    <script>
+        // creating an object
+        const person = {
+            name : "umesh",
+            surname : "sharma",
+            age : 21,
+            skills : "java"
+        };
+
+        // destructuring an object
+        
+        let {name} = person;
+        let {age} = person;
+
+        // you can also create like this :
+        // let {name, age} = person; // object keys should be same as varaiables names
+
+        document.querySelector("button").addEventListener("click", ()=>{
+            if(document.querySelector("h1").innerText == ""){
+                document.querySelector("h1").innerText = `my name is ${name} and i am ${age} years old`;
+            }else{
+                document.querySelector("h1").innerText ="";
+            }
+        })
+
+    </script>
+</body>
+</html>
