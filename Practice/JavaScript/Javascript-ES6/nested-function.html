@@ -9,7 +9,9 @@
     
     <h1></h1>
     <p></p>
+    <h2></h2>
     <button onclick="add()">add </button>
+    <button onclick="getMultiply()">Multiply</button>
 
     <script>
         
@@ -24,13 +26,16 @@
         }
 
         let printAns = (ans)=>{
-            document.querySelector('h1').innerText = ans;
+            document.querySelector('h1').innerText = `sum of ${a} + ${b} : ${ans}`;
         }
 
-        // let mul = new Function("5","4", "return a * b");
-        // mul();
-        // document.querySelector('h1').innerText = mul;
-
+        function getMultiply() {
+            let multiply = new Function("a","b","return a*b");
+    
+            let result = multiply(a,b);
+            document.querySelector("h2").innerText = `multiply of ${a} * ${b} : ${result}`;
+    
+        }
     </script>
 
 </body>
