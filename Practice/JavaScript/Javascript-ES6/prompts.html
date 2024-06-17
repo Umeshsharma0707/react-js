@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="alertFun()" >alert</button>
+</br><br>
+    <button onclick="promptFun()">prompt</button>
+</br><br>
+
+    <button onclick="confirmFun()">confirm</button>
+        
+    <script>
+        let alertFun = ()=>{
+            alert("hello bro")
+        }
+
+        let promptFun = ()=>{
+            let input = prompt("enter your name");
+            let h1 = document.createElement("h1");
+            document.querySelector("body").append(h1);
+            h1.innerText = input;
+
+        }   
+
+        let confirmFun = ()=>{
+            let ans = confirm("are you sure you want to continue");
+            let link = "void-keyword.html"
+            if(ans ===  true){
+                window.location = link;
+            }else{
+                alert("you cancled the task");
+            }
+        }
+    </script>   
+
+</body>
+</html>

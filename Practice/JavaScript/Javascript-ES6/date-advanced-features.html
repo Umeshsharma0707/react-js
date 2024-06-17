@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <h1></h1>
+    <script>
+        let d = new Date();
+        let text = d.toLocaleDateString();
+        document.querySelector("h1").innerText = text;
+        
+        let time = d.toLocaleTimeString();
+        let h1 = document.createElement("h1");
+            document.querySelector("h1").append(h1);
+            h1.innerText = time;
+
+        let dateTime = d.toLocaleString();
+        let h2 = document.createElement("h1");
+            document.querySelector("h1").append(h2);
+            h2.innerText = dateTime;
+        
+        let date = d.toDateString();
+        let h3 = document.createElement("h1");
+            document.querySelector("h1").append(h3);
+            h3.innerText = date;
+
+    </script>
+
+</body>
+</html>
