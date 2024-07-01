@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Check</title>
+</head>
+<body>
+
+    <form action="" onsubmit="checkAge(event)">
+        <label for="age">Age</label>
+        <input type="text" name="age" id="age">
+
+        <input type="submit">
+        <br><br>
+        <span style="color: black; background-color: red;"></span>
+    </form>
+
+    <!-- using arrow function -->
+    <h1>Using arrow function</h1>
+
+    <form action="" onsubmit="checkAgeUsingArrow(event)">
+        <label for="age">Age</label>
+        <input type="text" name="age" id="age2">
+
+        <input type="submit">
+        <br><br>
+        <span style="color: black; background-color: red;" id="span2"></span>
+    </form>
+
+    <script>
+        function checkAge(event) {
+            event.preventDefault();
+            
+            let age = parseInt(document.getElementById("age").value);
+
+            if (!isNaN(age) && age >= 0) {
+                if (age >= 18) {
+                    document.querySelector("span").innerText = "You are eligible to vote";
+                } else {
+                    document.querySelector("span").innerText = "You are not eligible to vote";
+                }
+            } else {
+                document.querySelector("span").innerText = "Please enter a valid age";
+            }
+        }
+
+        // using arrow function
+
+        let checkAgeUsingArrow = (event) => {
+            event.preventDefault();
+            
+            let age = parseInt(document.getElementById("age2").value);
+
+            if (!isNaN(age) && age >= 0) {
+                if (age >= 18 && age <= 100) {
+                    document.getElementById("span2").innerText = "You are eligible to vote";
+                } else if (age < 18) {
+                    document.getElementById("span2").innerText = "You are not eligible to vote";
+                } else {
+                    document.getElementById("span2").innerText = "Please enter a valid age";
+                }
+            } else {
+                document.getElementById("span2").innerText = "Please enter a valid age";
+            }
+        }
+    </script>
+    
+</body>
+</html>
