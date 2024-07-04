@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // objects in javascript
+
+        let obj = {
+            id : 101,
+            name : "umesh",
+            age : 21
+        };
+
+        document.write("id : " + obj.id);
+        document.write("name : " + obj.name);
+        document.write("age : " + obj.age);
+
+        // array objects
+
+        let arr = [
+            {id : 102, name : "raj", age : 21, salary : 50000},
+            {id : 103, name : "mukesh", age : 50, salary : 50042},
+            {id : 104, name : "mahesh", age : 41, salary : 505000},
+        ];
+
+        for(let value of arr){
+            document.write("<h1>" + 
+                "name : "+ value.name + "</h1>");
+        }
+        
+
+        // object iteration
+        
+        for(let property in obj){
+            document.write("<h1>" + 
+                property+ " : "  + obj[property] + "</h1>");
+        }
+    </script>
+
+</body>
+</html>

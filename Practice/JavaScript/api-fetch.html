@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    const url = "https://jsonplaceholder.typicode.com/todos";
+
+    let arr = new Array();
+    async function fetchApi() {
+        let response = await fetch(url);
+        let data = await response.json();
+        console.log(data);
+        arr = data;
+        arr.forEach((element)=>{
+        document.write(`<h1> id : ${element.id} </br> name : ${element.title}`);
+        document.write("<hr>");
+        document.write("</br>");
+    })
+    }
+
+    
+
+
+    fetchApi();
+</script>
+
+</body>
+</html>
